@@ -1,2 +1,13 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1. 小程序数据绑定 -->
+<view>hello {{message}}</view>
+
+<!-- 2. 列表渲染 -->
+<view wx:for="{{students}}" wx:key='id'>{{item.name}} - {{item.age}}</view>
+
+<!-- 3. data修改 -->
+<view>
+  当前计数：{{count}}
+</view>
+<button size="mini" type="primary" bindtap="add">+1</button>
+<button size="mini" type="warn" bindtap="sub">-1</button>

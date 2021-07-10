@@ -1,0 +1,22 @@
+<!--pages/text/text.wxml-->
+<!-- 1. text 基本使用   行内块元素 -->
+<text>hello word</text>
+<text>hello word</text>
+
+<!-- 2. user-select  长按文本是否可选 -->
+<text user-select="{{true}}">hello word</text>
+<text user-select>hello word</text>
+
+<!-- 3. space  是否显示连续空格 -->
+<!-- 
+  ensp  中文字符空格一半大小
+  emsp  中文字符空格大小
+  nbsp  根据字体设置的空格大小
+ -->
+<text space="emsp">hello word</text>
+<text space="ensp">hello word</text>
+<text space="nbsp">hello word</text>
+
+<!-- 4. decode  是否可解码 -->
+<!-- &lt;  ---》转换为    <   否则原样输出  -->
+<text decode>hello &lt; word</text>

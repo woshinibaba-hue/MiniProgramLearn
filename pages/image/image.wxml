@@ -1,0 +1,20 @@
+<!--pages/image/image.wxml-->
+<!-- 1. image 基本使用  默认为 320 x 240    行内块元素-->
+<!-- <image /> -->
+
+<!-- 2. src 属性  跟 html 的 img 标签差不多 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" />
+
+<!-- 3.  bindload 事件  当图片加载完毕之后触发 -->
+<!-- lazy-load 属性  图片懒加载   在即将进入一定范围（上下三屏）时才开始加载 -->
+<image wx:for="{{1}}" lazy-load src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+  bindload="handleImgLoad" />
+
+<!-- 4. mode  图片裁剪、缩放的模式 -->
+<!-- mode  一般都会设置为   widthFix  宽度不变，高度自动变化，保持原图宽高比不变-->
+<!-- show-menu-by-longpress   开启长按图片显示识别小程序码菜单 -->
+<image class="img" show-menu-by-longpress mode="widthFix" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" />
+
+<!-- 5. 补充知识 -->
+<button bindtap="handleSelectImg">选择图片</button>
+<image src="{{imgUrl}}" mode="widthFix" />

@@ -1,0 +1,22 @@
+<!--pages/button/button.wxml-->
+
+<!-- 1. button 基本使用  默认为块级元素-->
+<button>按钮</button>
+
+<!-- 2. size 属性  调节大小    就会更改为行内块元素-->
+<!-- disabled 属性  是否禁用 -->
+<button size="mini" disabled>按钮</button>
+
+<!-- 3. type 属性  样式 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<!-- 4. plain 属性  是否镂空 -->
+<button size="mini" plain type="primary">按钮</button>
+
+<!-- 5. loading 属性  是否展示loading状态 -->
+<button loading type="primary" plain>按钮</button>
+
+<!-- 6. hover-class  点击按钮之后的样式 -->
+<button hover-class="btn1">按钮</button>

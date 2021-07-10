@@ -1,0 +1,27 @@
+/* pages/view/view.wxss */
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+  transition: all .3s;
+}
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color:blue;
+  transition: all .3s;
+}
+
+.hover-box2 {
+  width: 150px;
+  height: 150px;
+  background-color: slateblue;
+  color: white;
+  font-size: 30px;
+}
+.hover-box1 {
+  width: 250px;
+  height: 250px;
+  background-color:violet;
+}

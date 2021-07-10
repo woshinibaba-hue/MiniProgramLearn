@@ -1,0 +1,13 @@
+<!--pages/scrollView/scrollView.wxml-->
+
+<!-- scroll-view  使用   区域滚动-->
+
+<!-- scroll-x  横向混动  -->
+<scroll-view class="scroll" scroll-x>
+  <view class="view1" wx:for="{{10}}">{{item}}</view>
+</scroll-view>
+
+<!-- scroll-y  纵向向混动  -->
+<scroll-view class="scroll2" scroll-y>
+  <view class="view2" wx:for="{{10}}">{{item}}</view>
+</scroll-view>

@@ -11,3 +11,12 @@
 </view>
 <button size="mini" type="primary" bindtap="add">+1</button>
 <button size="mini" type="warn" bindtap="sub">-1</button>
+
+<!-- 4. 获取用户信息的方式二  -->
+<!-- 将按钮的 open-type  属性设置为  getUserInfo    
+  监听按钮的  bindgetuserinfo  事件  就可以在事件对象中获取到用户信息了-->
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+
+<!-- 5.  展示用户信息   使用 open-data 组件来进行展示  仅展示-->
+<open-data type="userLanguage"></open-data>
+<open-data type="userAvatarUrl"></open-data>

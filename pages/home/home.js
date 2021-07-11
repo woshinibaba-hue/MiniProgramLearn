@@ -1,66 +1,53 @@
-// pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  btnClick() {
+    console.log(111);
+  },
+  btnTouchStart() {
+    console.log('手指开始触摸  btnTouchStart');
+  },
+  bindTouchEnd() {
+    console.log('手指触摸结束  bindTouchEnd');
+  },
+  bindTouchMove() {
+    console.log('手指开始移动  bindTouchMove');
+  },
+  bindLongPress() {
+    console.log('手指触摸后超过350毫秒 不再触发 tap 事件  bindLongPress');
+  },
+  bindTap() {
+    console.log('手指触摸后马上离开  bindTap');
+  },
+  // changedTouches  触摸事件，当前变化的触摸点信息的数组
+  // touches  触摸事件，当前停留在屏幕中的触摸点信息的数组
+  btnClick1(e) {
+    console.log(e);
+  },
+  bindTouchEnd1(e) {
+    console.log(e);
+  },
+  // currentTarget  当前组件的一些属性值集合
+  // target  触发事件的组件的一些属性值集合
+  box1(e) {
+    console.log(e);
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  // 事件捕获和冒泡
+  v1() {
+    console.log('v1捕获阶段');
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  v1bind() {
+    console.log('v1冒泡阶段');
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  v2() {
+    console.log('v2捕获阶段');
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  v2bind() {
+    console.log('v2冒泡阶段');
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  v3() {
+    console.log('v3捕获阶段');
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  v3bind() {
+    console.log('v3冒泡阶段');
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

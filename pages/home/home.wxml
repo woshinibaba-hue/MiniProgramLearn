@@ -1,2 +1,45 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1. 事件监听 -->
+<!-- 事件监听的书写方式  可以在 bind后面 或者 catch后面加上  : -->
+<button size="mini" bindtap="btnClick">按钮</button>
+<button size="mini" bind:tap='btnClick'>按钮</button>
+<button size="mini" catchtap="btnClick">按钮</button>
+
+<!-- 2. 常见事件类型监听 -->
+<view class="box" 
+  bindtouchstart="btnTouchStart" 
+  bindtouchend="bindTouchEnd" 
+  bindtouchmove="bindTouchMove"
+  bindlongpress="bindLongPress" 
+  bindtap="bindTap"
+>
+</view>
+
+<!-- 3. 事件对象 -->
+<button 
+  bindtap="btnClick1"
+  bindtouchend="bindTouchEnd1"
+>按钮</button>
+
+<view class="box1" bindtap="box1" id="box1">
+  box1
+  <view class="box2" bindtap="box2" id="box2">box2</view>
+</view>
+
+<view>-------------------</view>
+
+<!-- 4. 事件冒泡和事件捕获 -->
+<!-- 事件捕获   是通过 capture-bind 进行绑定  必须使用 : -->
+<!-- 事件冒泡  是通过 bind 进行绑定 -->
+<!-- 捕获阶段是从外到内   冒泡阶段是从内到外 -->
+<!-- 如果不想事件得到进一步的传递  那么可以将 bind 改为 catch -->
+<!-- 如果事件在捕获阶段被终止了  那么就不会存在冒泡阶段 -->
+<!-- capture-catch:事件类型    这个会终止捕获阶段，当捕获阶段被终止就不会有冒泡阶段    
+     catch:事件类型            这个会阻止事件冒泡 -->
+<view class="v1" capture-bind:tap='v1' bindtap="v1bind">
+  v1
+  <view class="v2" capture-bind:tap='v2' bindtap="v2bind">
+    v2
+    <view class="v3" capture-bind:tap='v3' bindtap="v3bind">v3</view>
+  </view>
+</view>

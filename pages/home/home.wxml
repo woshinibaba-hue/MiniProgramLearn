@@ -1,2 +1,17 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+
+<!-- 1. showToast -->
+<button bindtap="showToast">showToast</button>
+
+<!-- 2. showModal -->
+<button bindtap="showModal">showModal</button>
+
+<!-- 3. showLoadings -->
+<button bindtap="showLoading">showLoading</button>
+
+<!-- 4. showActionSheet -->
+<button bindtap="showActionSheet">showActionSheet</button>
+
+<!-- 5. 转发小程序 -->
+<button open-type="share">转发</button>

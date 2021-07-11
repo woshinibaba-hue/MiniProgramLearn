@@ -1,0 +1,4 @@
+<!--components/my-cpn/my-cpn.wxml-->
+
+<view class="title">头部</view>
+<view>导航</view>

@@ -1,0 +1,4 @@
+<!--components/my-props/my-props.wxml-->
+<!-- 使用传递过来的 class -->
+<view class="title titleclass">{{title}}</view>
+<view class="content">我是内容</view>

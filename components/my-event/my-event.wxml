@@ -1,0 +1,2 @@
+<!--components/my-event/my-event.wxml-->
+<view>my-event: <button size="mini" bind:tap='add'>+1</button></view>

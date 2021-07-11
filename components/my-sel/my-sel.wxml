@@ -1,0 +1,2 @@
+<!--components/my-sel/my-sel.wxml-->
+<view>my-sel: 当前计数：{{count}}</view>

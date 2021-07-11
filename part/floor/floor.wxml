@@ -1,0 +1,4 @@
+<include src="../nav/nav.wxml"></include>
+<view>-----</view>
+<view>底部</view>
+<view>版本</view>

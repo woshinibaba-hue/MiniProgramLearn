@@ -1,0 +1,5 @@
+/* pages/wxml/wxml.wxss */
+.active {
+  font-size: 60rpx;
+  color: red;
+}

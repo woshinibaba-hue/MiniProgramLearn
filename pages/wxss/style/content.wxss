@@ -1,0 +1,9 @@
+.content {
+  font-size: 30px;
+  color: cornflowerblue;
+}
+
+.content1 {
+  font-size: 60rpx;
+  color: cornflowerblue;
+}

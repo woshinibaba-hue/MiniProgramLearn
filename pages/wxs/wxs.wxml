@@ -1,0 +1,26 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 1. wxs 是什么   wes  相当于就是 js 跟 js 很相似 -->
+<!-- 什么时候使用 wxs  就是在 {{}} 内部需要调用函数的时候就需要使用 wxs   并且wxs   无法调用小程序的 API 的-->
+
+<!-- 1.1 使用 wxs -->
+<!-- 在 wxml 使用 wxs 必须使用 wxs 标签进行包裹  并且必须有一个 module 的属性 -->
+<wxs module="info">
+  var message = 'hello word'
+  function sum(num1, num2) {
+    return num1 + num2
+  }
+  // 必须将需要导出的 变量/函数 等 进行导出
+  module.exports = {
+    message: message,
+    sum: sum
+  }
+</wxs>
+
+<!-- 使用 wxs 里面的变量  或者调用 里面的函数 -->
+<view>{{info.message}}</view>
+<view>{{info.sum(10,20)}}</view>
+
+<!-- 1.2 从外部导入 wxs  进行使用 -->
+<!-- 外部导入 也必须使用 wxs 标签  并且 module 属性也是必须的    src  需要导入的路径 -->
+<wxs module="format" src='../../wxs/formatPrice.wxs'></wxs>
+<view>{{format.formatPrice(26.666666)}}</view>

@@ -1,0 +1,57 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- 1. {{}}  Mustache 语法 -->
+<!-- 1.1  渲染 data 中定义的 变量 -->
+<view>{{num}}</view>
+
+<!-- 1.2 进行一些运算 -->
+<view>{{num + 10}}</view>
+
+<!-- 1.3 对属性进行动态绑定 -->
+<button type="primary" size="mini" bindtap="toggleColor">切换颜色</button>
+<view class="{{isActive && 'active'}}">哈哈哈</view>
+
+<!-- 2. 条件判断   wx:if / wx:elif / wx:else-->
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- 3. 列表渲染 -->
+<!-- 3.1  默认 会有一个item 表示循环的每一项  index 为循环的 索引值 -->
+<view wx:for="{{list}}">{{item.name}} - {{index}}</view>
+<view>----------------</view>
+<!-- 3.2 修改默认的 item 与 index -->
+<!-- wx:key  是为了提高性能  绑定一个唯一并且不可变的值 -->
+<view wx:for="{{list}}" wx:for-index="i" wx:for-item="listItem" wx:key="id">{{listItem.name}} - {{i}}</view>
+
+<!-- 4. block 标签  这个标签是不会渲染为 dom 元素的， 相当于是一个占位，通常用与多个条件判断，条件循环如下 -->
+<block wx:if="{{false}}">
+  <button>按钮</button>
+  <view>哈哈哈</view>
+</block>
+
+<!-- 5. template 模板 -->
+<!-- 5.1 在 同一个文件当中使用模板 -->
+
+<!-- 默认是不会被渲染的， 需要使用该模板，该模板才会被渲染   
+  并且 每一个模板都必须有一个 name属性  这表示是模板的名称  使用模板时会用到这个name属性值-->
+<!-- 模板当中也可以使用 变量  在使用模板的时候传入一个 data 对象 -->
+<!-- <template name="template">
+  <button size="mini">{{btnText}}</button>
+  <view>{{message}}</view>
+</template> -->
+
+<!-- 5.2 将模板抽离出去, 导入之后在使用 -->
+<!-- 导入模板 使用 import 标签进行导入   并且模板当中不能导入模板 -->
+<import src="../../template/btn.wxml" />
+
+<!-- 使用模板 -->
+<template is='template' data="{{btnText: '按钮', message: '哈哈哈'}}" />
+<template is='template' data="{{btnText: '提交', message: '嗯嗯嗯'}}" />
+
+<!-- 6. include  导入 -->
+<!-- include  可以将目标文件除了 template/wxs 外的整个代码引入，相当于是拷贝到 include 位置 -->
+<!-- 相当于是一个占位符， 将指定路径的 wxml 代码 
+  直接 将 include 标签所在位置进行替换， 替换为 指定路径的wxml代码 -->
+  <!-- 并且 include 可以循环导入 -->
+<include src="../../part/floor/floor.wxml" />

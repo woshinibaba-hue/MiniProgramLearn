@@ -1,0 +1,22 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 1. 样式书写的三种方式 -->
+<!-- 1.1 使用内联样式 -->
+<view style='color:red; font-size:30px;'>哈哈哈</view>
+
+<!-- 1.2 使用类名在 .wxss 当中书写样式 -->
+<view class="title">哈哈哈</view>
+
+<!-- 1.3 使用全局样式  即在 app.wxss 当中书写 -->
+<view class="title1">哈哈哈</view>
+
+<!-- 2. 微信关于屏幕适配  使用的是  rpx  
+  rpx在 input6 屏幕下是与  px  比例为 1:2  即  20rpx 对应  10px -->
+<view class="box"></view>
+<view class="box1"></view>
+
+<view class="content">哈哈哈</view>
+<view class="content1">哈哈哈</view>
+
+<!-- 3. 使用 vant ui  组件库 -->
+<van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
+<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />

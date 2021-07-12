@@ -1,2 +1,25 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+
+<!-- 页面跳转 -->
+
+<!-- 1. navigator 基本使用   url  是需要跳转的路径 -->
+<navigator url="/pages/detail/detail">跳转至详情页</navigator>
+
+<!-- 2. 演示 open-type ： redirect -->
+<!-- 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。 -->
+<navigator url="/pages/detail/detail" open-type="redirect">跳转至详情页 (redirect)</navigator>
+
+<!-- 3.  reLaunch   关闭所有页面，打开到应用内的某个页面 -->
+<navigator url="/pages/detail/detail" open-type="reLaunch">跳转至详情页 (reLaunch)</navigator>
+
+<!-- 4.  switchTab   跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面  -->
+<navigator url="/pages/about/about" open-type="switchTab">跳转至关于页 (switchTab)</navigator>
+<!-- 5. open-type  默认为  navigate  跳转方式 -->
+
+<!-- 6. 跳转页面携带参数 -->
+<navigator url="/pages/detail/detail?name=zs&age=18">跳转至详情页</navigator>
+
+<!-- 使用代码跳转 -->
+<!-- 代码方式跳转  对应的  API  与 使用  navigator  方式跳转的名称基本，功能也基本一致 -->
+<button bindtap="handleDetail">跳转至详情页</button>

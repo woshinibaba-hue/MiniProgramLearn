@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<text>详情页</text>
+
+<!-- 使用  navigator  的 open-type的 navigateBack  进行页面返回 -->
+<!-- delta  可以指定返回的层级  默认为 1 表示返回 1 层 -->
+<navigator open-type="navigateBack" delta="1">返回</navigator>
+<button bindtap="handleBackHome">返回</button>
